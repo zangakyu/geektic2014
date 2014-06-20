@@ -63,3 +63,24 @@ utilisant angular, affichant simplement un message d'accueil. A vous bien sûr d
 
 Une classe de base `BaseDaoTest`, et un exemple d'utilisation de cette classe de base `ExampleDaoTest` vous sont fournis
 pour vous aider à implémenter vos tests de DAO.
+
+# Environnement de travail.
+
+Comme d'habitude, si vous travaillez sur les machines de l'IUT, il vous faudra ajouter la ligne suivante au début du
+fichier `gradlew.bat` :
+
+    @set GRADLE_USER_HOME=F:\gradle_home
+
+où, bien sûr, F:\gradle_home est le chemin du répertoire gradle_home sur votre machine.
+
+Ensuite, vous pourrez générer le projet eclipse en lançant la commande
+
+    gradlew eclipse
+
+Vous importerez ensuite le projet dans Eclipse, et vous vous assurerez que dans la vue "Servers" de Eclipse, un serveur
+Tomcat est configuré. Vous double-cliquerez sur le serveur tomcat, et dans l'onglet "Modules", vous derez en sorte que la
+liste des modules contienne uniquement l'élément suivant:
+
+Path  | Document Base | Module      | Auto Reload
+----- | ------------- | ----------- | -----------
+/     | geektic2014   | geektic2014 | Enabled

@@ -4,5 +4,7 @@ build
 .idea/
 classes/
 bin/
+test-bin/
 *.iml
 MyDB.*
+/test-bin
