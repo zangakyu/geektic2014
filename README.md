@@ -64,7 +64,7 @@ utilisant angular, affichant simplement un message d'accueil. A vous bien sûr d
 Une classe de base `BaseDaoTest`, et un exemple d'utilisation de cette classe de base `ExampleDaoTest` vous sont fournis
 pour vous aider à implémenter vos tests de DAO.
 
-# Environnement de travail.
+# Environnement de travail
 
 Comme d'habitude, si vous travaillez sur les machines de l'IUT, il vous faudra ajouter la ligne suivante au début du
 fichier `gradlew.bat` :
