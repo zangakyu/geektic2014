@@ -16,7 +16,8 @@ Bonus : chaque fois qu'un profil détaillé est consulté, un compteur de consul
 ligne sera ajoutée à une table d'audit contenant l'instant précis de la consultation, l'adresse IP du visiteur, et bien
 sûr le geek consulté.
 
-L'aspect graphique de l'application est laissé à votre bon goût.
+L'aspect graphique de l'application est laissé à votre bon goût. Un script SQL permettant de créer le schéma,
+et un autre permettant de le peupler avec des données permettant d'utiliser l'application, devront être fournis.
 
 # Consignes techniques
 
