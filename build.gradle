@@ -36,3 +36,7 @@ war {
 eclipse.classpath.file.whenMerged { cp ->
     cp.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/") }*.output = "test-bin"
 }
+
+// otherwise, Spring/JPA don't find annotated classes because the persistence.xml is not in the
+// same directory as the annotated classes
+sourceSets.main.output.resourcesDir = sourceSets.main.output.classesDir
