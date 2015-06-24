@@ -40,3 +40,7 @@ eclipse.classpath.file.whenMerged { cp ->
 // otherwise, Spring/JPA don't find annotated classes because the persistence.xml is not in the
 // same directory as the annotated classes
 sourceSets.main.output.resourcesDir = sourceSets.main.output.classesDir
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
