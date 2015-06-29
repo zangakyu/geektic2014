@@ -19,6 +19,8 @@ public class Interest {
 	public Interest(){
 	}
 	
+	//Getters and Setters
+	
 	public int getId() {
 		return id;
 	}
