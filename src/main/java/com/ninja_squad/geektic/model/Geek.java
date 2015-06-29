@@ -29,7 +29,7 @@ public class Geek {
 		      name="GEEKINTEREST",
 		      joinColumns={@JoinColumn(name="GEEKID", referencedColumnName="ID")},
 		      inverseJoinColumns={@JoinColumn(name="INTERESTID", referencedColumnName="ID")})
-	private List<Interest> interest;
+	private List<Interest> interests;
 	
 	public Geek(){	
 	}
@@ -73,11 +73,11 @@ public class Geek {
 	}
 
 	public List<Interest> getInterest() {
-		return interest;
+		return interests;
 	}
 
 	public void setInterest(List<Interest> interest) {
-		this.interest = interest;
+		this.interests = interest;
 	}
 	
 	
