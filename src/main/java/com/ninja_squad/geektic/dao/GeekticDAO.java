@@ -43,7 +43,7 @@ public class GeekticDAO {
 	 * 
 	 * @param id The geek Id
 	 */
-	public Geek findById(Long id) {
+	public Geek findById(int id) {
 		return em.find(Geek.class, id);
 	}
 

@@ -48,7 +48,7 @@ public class GeekticService {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	public Geek getGeekById(@PathVariable("id") Long id) {
+	public Geek getGeekById(@PathVariable("id") int id) {
 		return geekticDAO.findById(id);
 	}
 }
