@@ -1,1 +1,18 @@
-<div><p><h1><!--  {{ helloMessage.message }} -->t</h1></p></div>
+<div id="Geeks">
+ 
+    <h2>Liste des geeks</h2>
+ 
+    <table>
+    	<th>Prenom</th>
+    	<th>Nom</th>
+    	<th>Interets</th>
+        <tr ng-repeat="geek in geeks">
+            <td>{{geek.firstName}}</td>
+            <td>{{geek.lastName}}</td>
+            <td ng-repeat="int in geek.interest">
+            {{int.name}},
+            </td>
+        </tr>
+    </table>
+ 
+</div>
