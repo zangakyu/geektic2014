@@ -21,7 +21,7 @@ public class Geek {
 	private String lastName;
 	private String FirstName;
 	private int age;
-	private boolean sexe;
+	private boolean sex;
 	private String mail;
 
 	@ManyToMany
@@ -64,12 +64,12 @@ public class Geek {
 		this.age = age;
 	}
 
-	public boolean isSexe() {
-		return sexe;
+	public boolean isSex() {
+		return sex;
 	}
 
-	public void setSexe(boolean sexe) {
-		this.sexe = sexe;
+	public void setSex(boolean sex) {
+		this.sex = sex;
 	}
 
 	public String getMail() {

@@ -42,8 +42,8 @@ public class GeekticService {
 	}
 
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public List<Geek> getGeeksByInterest(@RequestParam("sexe") boolean sexe, @RequestParam("interest") String interestName) {
-		return geekticDAO.findBySexeAndInterest(interestName, sexe);
+	public List<Geek> getGeeksByInterest(@RequestParam("sex") boolean sex, @RequestParam("interest") String interestName) {
+		return geekticDAO.findBySexAndInterest(interestName, sex);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)

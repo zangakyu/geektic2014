@@ -9,7 +9,7 @@ DROP SEQUENCE INTERESTID_SEQ IF EXISTS;
 --CREATE TABLES
 
 -- 0 = geekete , 1 = geek
-CREATE TABLE GEEK (id int, lastName varchar(30),firstName varchar(30),age int,sexe boolean,mail varchar(30));
+CREATE TABLE GEEK (id int, lastName varchar(30),firstName varchar(30),age int,sex boolean,mail varchar(30));
 
 CREATE TABLE INTEREST (id int, name varchar(30));
 

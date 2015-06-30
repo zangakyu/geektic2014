@@ -47,13 +47,13 @@ public class GeekticServiceTest {
 		geek.setAge(12);
 		geek.setFirstName("Castiel");
 		geek.setLastName("Angel");
-		geek.setSexe(true);
+		geek.setSex(true);
 		
 		geeks.add(geek);
 		
-		when(mockedDAO.findBySexeAndInterest(anyString(), anyBoolean())).thenReturn(geeks);
+		when(mockedDAO.findBySexAndInterest(anyString(), anyBoolean())).thenReturn(geeks);
 		
-		assertEquals(geeks,mockedDAO.findBySexeAndInterest("java", true));
+		assertEquals(geeks,mockedDAO.findBySexAndInterest("java", true));
 		assertEquals(geek, geeks.get(0));
 	}
 

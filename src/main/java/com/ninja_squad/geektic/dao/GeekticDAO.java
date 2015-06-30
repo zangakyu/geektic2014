@@ -52,7 +52,7 @@ public class GeekticDAO {
 	 * 
 	 * @param interest
 	 */
-	public List<Geek> findBySexeAndInterest(String interestName, boolean sexe) {
+	public List<Geek> findBySexAndInterest(String interestName, boolean sex) {
 
 		// Get the interest
 		String jpql = "SELECT i FROM Interest AS i WHERE lower(i.name) = :name";
@@ -63,10 +63,10 @@ public class GeekticDAO {
 			Interest interest = interestQuery.getSingleResult();
 
 			// Search geeks which has this interest
-			jpql = "SELECT g FROM Geek AS g WHERE g.sexe=:sexe AND :interest MEMBER OF g.interests";
+			jpql = "SELECT g FROM Geek AS g WHERE g.sex=:sex AND :interest MEMBER OF g.interests";
 			TypedQuery<Geek> geekQuery = em.createQuery(jpql, Geek.class);
 			geekQuery.setParameter("interest", interest);
-			geekQuery.setParameter("sexe", sexe);
+			geekQuery.setParameter("sex", sex);
 
 			return geekQuery.getResultList();
 

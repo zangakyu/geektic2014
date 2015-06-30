@@ -33,10 +33,14 @@ app.controller('SearchCtrl', function($scope, $http, $location, $routeParams) {
 	     $location.path("/search/"+interest+"/"+sex);
 		  console.log($location.path());
 		}
-
-	    $http.get('/api/geeks/search?interest='+$routeParams.interest+"&sexe="+$routeParams.sex).success(function(geeks) {
-	        $scope.geeks=geeks;
-	    });
+		if($routeParams.interest!="undefined" && $routeParams.sex!="undefined"){
+			$http.get('/api/geeks/search?interest='+$routeParams.interest+"&sex="+$routeParams.sex).success(function(geeks) {
+	         $scope.geeks=geeks;
+	      });
+		} 
+		else{
+			console.log("nope");		
+		}   
 });
 
 app.controller('HomeCtrl', function($scope, $http) {
