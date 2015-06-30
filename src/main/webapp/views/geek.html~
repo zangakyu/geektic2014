@@ -1,5 +1,5 @@
 <div id="Geek">
-    <table>
+
     	<b>Prenom</b><br />
     	<p>{{geek.firstName}}</p><br />
     	<b>Nom</b><br />
@@ -14,7 +14,6 @@
       <p ng-repeat="int in geek.interest">
           {{int.name}},
       </p>
-    </table>
  
     <!-- <button ng-click="gotoTodoNewPage()">Ajouter</button> -->
  

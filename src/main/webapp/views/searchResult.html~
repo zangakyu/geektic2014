@@ -1,0 +1,26 @@
+<div id="Search">
+     <form method="get" ng-submit="searchGeek(interest,sex)">
+			<b>Interest 2</b>
+			<input type="text" name="interest" ng-model="interest">
+			<input type="radio" name="sex" value="true" checked ng-model="sex">Homme
+			<input type="radio" name="sex" value="false" ng-model="sex">Femme
+			<input type="submit" value="Submit">
+  			 <!-- <button ng-click="gotoTodoNewPage()">Ajouter</button> -->
+		</form> 
+		    <h2>Liste des geeks</h2>
+ 
+    <table>
+    	<th>Prenom</th>
+    	<th>Nom</th>
+    	<th>Interets</th>
+        <tr ng-repeat="geek in geeks">
+        
+            <td><a href="/geeks/{{geek.id}}">{{geek.firstName}}</a></td>
+            <td>{{geek.lastName}}</td>
+            <td ng-repeat="int in geek.interest">
+            {{int.name}},
+            </td>
+     
+        </tr>
+    </table>
+</div>

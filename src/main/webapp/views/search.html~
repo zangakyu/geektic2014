@@ -1,13 +1,10 @@
-<div id="Search" ng-controller="SearchCtrl">
+<div id="Search">
      <form method="get" ng-submit="searchGeek(interest,sex)">
 			<b>Interest</b>
 			<input type="text" name="interest" ng-model="interest">
-			<input type="radio" name="sex" value="true" checked ng-model="sex">Homme
+			<input type="radio" name="sex" value="true" ng-model="sex" checked >Homme
 			<input type="radio" name="sex" value="false" ng-model="sex">Femme
 			<input type="submit" value="Submit">
   			 <!-- <button ng-click="gotoTodoNewPage()">Ajouter</button> -->
 		</form> 
- 
- 
- 
 </div>

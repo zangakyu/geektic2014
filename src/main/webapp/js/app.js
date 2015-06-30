@@ -4,9 +4,9 @@ app.config(function ($routeProvider) {
         $routeProvider.
             when('/geeks', {templateUrl:'views/geeks.html',   controller:'GeeksCtrl'}).
             when('/geeks/:geekId', {templateUrl:'views/geek.html',   controller:'GeekCtrl'}).
-            when('/search',  {templateUrl:'views/search.html',    controller:'SearchCtrl'}).
-            when('/',  {templateUrl:'views/search.html',    controller:'HomeCtrl'}).
-            otherwise({redirectTo:'/'});
+            when('/search',  {templateUrl:'views/search.html',    controller:'SearchPrepareCtrl'}).
+            when('/search/:interest/:sex',  {templateUrl:'views/searchResult.html',    controller:'SearchCtrl'}).
+            otherwise({redirectTo:'/search'});
 });
 
 app.controller('GeeksCtrl', function($scope, $http) {
@@ -21,13 +21,22 @@ app.controller('GeekCtrl', function($scope, $http,$routeParams) {
     });
 });
 
-app.controller('SearchCtrl', function($scope, $http) {
+app.controller('SearchPrepareCtrl', function($scope, $http, $location) {
 	$scope.searchGeek = function (interest,sex){
-		console.log("test");
+	   $location.path("/search/"+interest+"/"+sex);
+		console.log($location.path());
 	}
-  /*  $http.get('/api/search').success(function(geeks) {
-        $scope.geeks=geeks;
-    }); */
+});
+
+app.controller('SearchCtrl', function($scope, $http, $location, $routeParams) {
+		$scope.searchGeek = function (interest,sex){
+	     $location.path("/search/"+interest+"/"+sex);
+		  console.log($location.path());
+		}
+
+	    $http.get('/api/geeks/search?interest='+$routeParams.interest+"&sexe="+$routeParams.sex).success(function(geeks) {
+	        $scope.geeks=geeks;
+	    });
 });
 
 app.controller('HomeCtrl', function($scope, $http) {
