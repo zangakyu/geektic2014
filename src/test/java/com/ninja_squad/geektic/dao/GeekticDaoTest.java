@@ -22,4 +22,8 @@ public class GeekticDaoTest extends BaseDaoTest {
 		List<Geek> geeks = dao.findAll();
 		assertEquals(7, geeks.size());
 	}
+	
+	// TODO Test pour vérifier le findBySexAndInterest
+	public void findBySexAndInterestTest() {
+	}
 }

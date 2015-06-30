@@ -51,4 +51,6 @@ public class GeekticService {
 	public Geek getGeekById(@PathVariable("id") int id) {
 		return geekticDAO.findById(id);
 	}
+	
+	// TODO Implements the Mapping for findByInterest DAO function
 }

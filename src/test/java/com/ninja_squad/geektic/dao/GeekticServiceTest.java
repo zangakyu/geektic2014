@@ -56,5 +56,20 @@ public class GeekticServiceTest {
 		assertEquals(geeks,mockedDAO.findBySexAndInterest("java", true));
 		assertEquals(geek, geeks.get(0));
 	}
+	
+	@Test
+	public void getOneGeekById(){
+		
+		Geek geek = new Geek();
+		geek.setAge(12);
+		geek.setFirstName("Castiel");
+		geek.setLastName("Angel");
+		geek.setSex(true);
+		geek.setId(0);
+		
+		when(mockedDAO.findById(0)).thenReturn(geek);
+		
+		assertEquals(geek,mockedDAO.findById(0));
+	}
 
 }

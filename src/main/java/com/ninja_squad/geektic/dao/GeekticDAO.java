@@ -12,6 +12,11 @@ import org.springframework.stereotype.Repository;
 import com.ninja_squad.geektic.model.Geek;
 import com.ninja_squad.geektic.model.Interest;
 
+/**
+ * The geektic Database Access Object
+ * 
+ * @author zangakyu
+ */
 @Repository
 public class GeekticDAO {
 
@@ -72,9 +77,9 @@ public class GeekticDAO {
 
 		} catch (NoResultException ex) {
 			return null;
-		}	
+		}
 	}
-	
+
 	/**
 	 * Returns the geeks which interests contains the given string
 	 * 
@@ -99,7 +104,7 @@ public class GeekticDAO {
 
 		} catch (NoResultException ex) {
 			return null;
-		}	
+		}
 	}
 
 }

@@ -11,6 +11,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Class representing a Geek
+ * 
+ * @author zangakyu
+ */
 @Entity
 public class Geek {
 	@Id
