@@ -51,7 +51,7 @@ public class GeekticServiceTest {
 		
 		geeks.add(geek);
 		
-		when(mockedDAO.findBySexAndInterest(anyString(), anyBoolean())).thenReturn(geeks);
+		when(mockedDAO.findBySexAndInterest("java", true)).thenReturn(geeks);
 		
 		assertEquals(geeks,mockedDAO.findBySexAndInterest("java", true));
 		assertEquals(geek, geeks.get(0));

@@ -48,7 +48,7 @@ public class GeekticDAO {
 	}
 
 	/**
-	 * Returns the geeks which interests contains the given string
+	 * Returns the geeks which sex and interest match
 	 * 
 	 * @param interest
 	 */
@@ -67,6 +67,33 @@ public class GeekticDAO {
 			TypedQuery<Geek> geekQuery = em.createQuery(jpql, Geek.class);
 			geekQuery.setParameter("interest", interest);
 			geekQuery.setParameter("sex", sex);
+
+			return geekQuery.getResultList();
+
+		} catch (NoResultException ex) {
+			return null;
+		}	
+	}
+	
+	/**
+	 * Returns the geeks which interests contains the given string
+	 * 
+	 * @param interest
+	 */
+	public List<Geek> findByInterest(String interestName) {
+
+		// Get the interest
+		String jpql = "SELECT i FROM Interest AS i WHERE lower(i.name) = :name";
+		TypedQuery<Interest> interestQuery = em.createQuery(jpql, Interest.class);
+		interestQuery.setParameter("name", interestName.toLowerCase());
+
+		try {
+			Interest interest = interestQuery.getSingleResult();
+
+			// Search geeks which has this interest
+			jpql = "SELECT g FROM Geek AS g WHERE :interest MEMBER OF g.interests";
+			TypedQuery<Geek> geekQuery = em.createQuery(jpql, Geek.class);
+			geekQuery.setParameter("interest", interest);
 
 			return geekQuery.getResultList();
 

@@ -45,7 +45,7 @@ public class GeekticService {
 	public List<Geek> getGeeksByInterest(@RequestParam("sex") boolean sex, @RequestParam("interest") String interestName) {
 		return geekticDAO.findBySexAndInterest(interestName, sex);
 	}
-
+	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public Geek getGeekById(@PathVariable("id") int id) {

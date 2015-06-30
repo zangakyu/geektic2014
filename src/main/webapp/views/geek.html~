@@ -1,10 +1,10 @@
 <div id="Geek" class="profile">
-		<h2>Profile</h2>
-    	<p><b>First Name</b>&nbsp;{{geek.firstName}}&nbsp;&nbsp;
-    	<b>Last Name</b>&nbsp;{{geek.lastName}}</p>
-    	<p><b>Age</b>&nbsp;{{geek.age}}</p>
-    	<p><b>Sex</b>&nbsp;{{geek.sex}}</p>
-    	<p><b>Mail</b>&nbsp;{{geek.mail}}</p>
+		<h2>Profile :</h2>
+    	<p><b>First Name :</b>&nbsp;{{geek.firstName}}</p>
+    	<p><b>Last Name :</b>&nbsp;{{geek.lastName}}</p>
+    	<p><b>Age :</b>&nbsp;{{geek.age}}</p>
+    	<p><b>Sex :</b>&nbsp;{{geek.sex?"Man":"Woman"}}</p>
+    	<p><b>Mail :</b>&nbsp;{{geek.mail}}</p>
     	<b>Interests</b><br />
       <p ng-repeat="int in geek.interest">
           {{int.name}}

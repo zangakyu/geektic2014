@@ -1,0 +1,75 @@
+.header {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #373737;
+  margin: 0 auto;
+  padding: 0;
+  color: #cdcdcd;
+  border-style: solid;
+  border-color: #a7a7a7 #a7a7a7;
+  border-width: 0px 0px 5px 0px;
+}
+.header a:hover,
+.header a:visited,
+.header a:link,
+.header a:active {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+.headerText {
+  color: #cdcdcd;
+  margin-left: 5px;
+  font-size: 30px;
+}
+.content {
+	top: 15px;
+	margin-left:8px;
+}
+.profile {
+	margin-left:8px;
+	font-size: 15px;
+	border-color: #a7a7a7 #a7a7a7;
+   border-width: 0px 0px 3px 3px;
+   width: 70%;
+}
+
+.geeksTable{
+    width: 100%;
+    border-collapse: collapse;
+    }
+.geeksTable td, .geeksTable th{
+	border: 1px solid #373737;
+    padding: 3px 7px 2px 7px;
+    font-size: 12px;
+}
+
+.geeksTable th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #373737;
+    color: #ffffff;
+}
+body {
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 13px;
+  text-stroke: 1px rgba(255,255,255,0.1);
+  color: #555;
+  background-color: #cdcdcd;
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  width: 80% ;
+  margin-left: auto ;
+  margin-right: auto ;
+  text-align: center;
+  font-size: 18px;
+}
+
+.interestInput {
+  width: 400px;
+}
