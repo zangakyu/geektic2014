@@ -3,29 +3,79 @@
 <html ng-app="geektic">
 <style type="text/css">
 
-a:link { text-decoration: none }
-a:active { text-decoration: none }
-a:visited { text-decoration: none }
-
 .header {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #373737;
+  margin: 0 auto;
+  padding: 0;
+  color: #cdcdcd;
+  border-style: solid;
+  border-color: #a7a7a7 #a7a7a7;
+  border-width: 0px 0px 5px 0px;
+}
+.header a:hover,
+.header a:visited,
+.header a:link,
+.header a:active {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+.headerText {
+  color: #cdcdcd;
+  margin-left: 5px;
+  font-size: 30px;
+}
+.content {
+	top: 15px;
+	margin-left:8px;
+}
+.profile {
+	margin-left:8px;
+	font-size: 18px;
+}
 
-    height:50px;
-    background-color:#383838;
-    border:1px solid #CCC;
-    margin:0px auto;
-    width:100%;
-    position:fixed;
-    top:0px;
+.geeksTable{
+    width: 100%;
+    border-collapse: collapse;
+    }
+.geeksTable td, .geeksTable th{
+	border: 1px solid #373737;
+    padding: 3px 7px 2px 7px;
+    font-size: 12px;
+}
+
+.geeksTable th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #373737;
+    color: #ffffff;
+}
+body {
+  font-family: "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: 13px;
+  text-stroke: 1px rgba(255,255,255,0.1);
+  color: #555;
+  background-color: #cdcdcd;
+  margin: 0;
+  padding: 0;
 }
 </style>
     <head>
         <title>Geektic</title>
     </head>
     <body>
-    <div id="header">
-    <a href="#search">Geektic</a>
-    </div>
-		  <div ng-view></div>
+    <div class="header">
+    	<div class="headerText">
+    	<a href="#search">Geektic</a>
+    	</div>
+    </div><br /><br />
+    <div class="content">
+   	 <div ng-view></div>  
+    </div>  
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/app.js"></script>

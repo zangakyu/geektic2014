@@ -1,20 +1,12 @@
-<div id="Geek">
-
-    	<b>Prenom</b><br />
-    	<p>{{geek.firstName}}</p><br />
-    	<b>Nom</b><br />
-    	<p>{{geek.lastName}}</p><br />
-    	<b>Age</b><br />
-    	<p>{{geek.age}}</p><br />
-    	<b>Sexe</b><br />
-    	<p>{{geek.sexe}}</p><br />
-    	<b>Mail</b><br />
-    	<p>{{geek.mail}}</p><br />
+<div id="Geek" class="profile">
+		<h2>Profile</h2>
+    	<p><b>Prenom</b>&nbsp;{{geek.firstName}}&nbsp;&nbsp;
+    	<b>Nom</b>&nbsp;{{geek.lastName}}</p>
+    	<p><b>Age</b>&nbsp;{{geek.age}}</p>
+    	<p><b>Sexe</b>&nbsp;{{geek.sexe}}</p>
+    	<p><b>Mail</b>&nbsp;{{geek.mail}}</p>
     	<b>Interets</b><br />
       <p ng-repeat="int in geek.interest">
-          {{int.name}},
+          {{int.name}}
       </p>
- 
-    <!-- <button ng-click="gotoTodoNewPage()">Ajouter</button> -->
- 
 </div>

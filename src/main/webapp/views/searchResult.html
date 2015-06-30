@@ -9,7 +9,7 @@
 		</form> 
 		    <h2>Liste des geeks</h2>
  
-    <table>
+    <table class="geeksTable">
     	<th>Prenom</th>
     	<th>Nom</th>
     	<th>Interets</th>
@@ -17,10 +17,11 @@
         
             <td><a href="#/geeks/{{geek.id}}">{{geek.firstName}}</a></td>
             <td>{{geek.lastName}}</td>
-            <td ng-repeat="int in geek.interest">
-            {{int.name}},
+            <td>
+            <p ng-repeat="int in geek.interest">
+            {{int.name}}&nbsp;
+            </p>
             </td>
-     
         </tr>
     </table>
 </div>
